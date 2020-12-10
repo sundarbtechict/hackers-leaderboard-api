@@ -2,6 +2,9 @@
   "name": "leaderboard_api",
   "version": "1.0.0",
   "description": "Leader Board Api",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
