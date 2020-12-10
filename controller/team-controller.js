@@ -20,7 +20,7 @@ exports.createTeam = async (req, res) => {
         res.send(result);
     } catch (err) {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the Team."
+            message: "Some error occurred while creating the Team. Please Try Again"
         });
     }
 }
@@ -140,7 +140,7 @@ exports.pairTeam = async (req, res) => {
         res.send([result1, result2]);
     } catch (err) {
         res.status(500).send({
-            message: err.message || "Some error occurred while paring the Team."
+            message: "Some error occurred while paring the Team. Please Try Again"
         });
     }
 }
