@@ -35,7 +35,7 @@ exports.getTeams = async (req, res) => {
         console.log(score)
         let searchBy = {}
         if (team_name)
-            searchBy = { team_name: '/^' + team_name + '/i' };
+            searchBy = { team_name: { $regex: new RegExp(team_name), $options: 'i' } };
         else if (score)
             searchBy = { score: +score };
         console.log(searchBy)
