@@ -16,10 +16,12 @@ app.use(express.json());
 // // parse requests of content-type - application/json
 // app.use(bodyParser.json())
 
-mongoose.connect('mongodb://localhost/leaderboard-db', { useNewUrlParser: true }).then(() => console.log("MongoDB connected...")).catch(() => console.log("not connected"));
+// TODO: read it from env file
+const DB_URL = 'mongodb+srv://admin:admin123$@cluster0.2gf7g.mongodb.net/hackers-leaderboard?retryWrites=true&w=majority';
+
+mongoose.connect(DB_URL, { useNewUrlParser: true }).then(() => console.log("MongoDB connected...")).catch(() => console.log("not connected"));
 
 //const db = mongoose.connection();
-
 
 
 // Use Api routes in the App
