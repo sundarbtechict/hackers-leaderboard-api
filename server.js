@@ -17,7 +17,7 @@ app.use(express.json());
 // app.use(bodyParser.json())
 
 // TODO: read it from env file
-const DB_URL = 'mongodb+srv://admin:admin123$@cluster0.2gf7g.mongodb.net/hackers-leaderboard?retryWrites=true&w=majority';
+const DB_URL = 'mongodb+srv://admin:admin123$@cluster0.2gf7g.mongodb.net/hackers-leaderboard-db?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL, { useNewUrlParser: true }).then(() => console.log("MongoDB connected...")).catch(() => console.log("not connected"));
 
